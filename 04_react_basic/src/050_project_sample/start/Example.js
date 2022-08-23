@@ -1,7 +1,7 @@
 const Example = () => {
   return (
     <div>
-      <h3>startフォルダのコード</h3>
+      <h3>Hello, React.</h3>
     </div>
   );
 };
