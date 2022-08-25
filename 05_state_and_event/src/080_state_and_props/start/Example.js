@@ -5,15 +5,18 @@ const Example = () => {
   const toggleComponent = () => {
     setToggle(prev => !prev);
   }
+  const [countA, setCountA] = useState(0);
+  const [countB, setCountB] = useState(0);
   return (
     <>
     <button onClick={toggleComponent}>toggle</button>
-    {toggle ? <Count key="A" title="A"/> : <Count key="B" title="B"/>}
+    {toggle ?
+      <Count key="A" title="A" count={countA} setCount={setCountA}/>
+    : <Count key="B" title="B" count={countB} setCount={setCountB}/>}
     </>
   )
 }
-const Count = ({ title }) => {
-  const [count, setCount] = useState(0);
+const Count = ({ title, count, setCount }) => {
   const countUp = () => {
     setCount((prevstate) => prevstate + 1);
   };
