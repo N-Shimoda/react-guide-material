@@ -1,4 +1,9 @@
+# ignore node_modules and package-lock.json
+# these directories are automatically created by `npm install`
+# and modified by `npm start`
 04_react_basic/node_modules
 04_react_basic/package-lock.json
 05_state_and_event/node_modules
 05_state_and_event/package-lock.json
+06_control_and_form/node_modules
+06_control_and_form/package-lock.json
