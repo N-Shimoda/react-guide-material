@@ -7,7 +7,7 @@ const AnimalList = ({ animals }) => {
   return (
     <ul>
       {animals.map((animal) => {
-        return <AnimalItem animal={animal} />;
+        return <AnimalItem animal={animal} key={animal}/>;
       })}
     </ul>
   );
