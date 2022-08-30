@@ -11,7 +11,25 @@ const StyledButton = styled.button`
     font-weight: bold;
     cursor: pointer;
     background: ${({isSelected}) => isSelected ? "pink" : ""};
+
+    @media (max-width: 1200px) {
+      border-radius: 0;
+    }
 `;
+
+// StyledButtonを継承したスタイル
+const OrangeButton = styled(StyledButton)`
+  background-color: orange;
+
+  :hover {
+    color: red;
+    opacity: 0.6;   // 透明度
+  }
+
+  span {
+    font-size: 1.5em;
+  }
+`
 
 const Example = () => {
   const [isSelected, setIsSelected] = useState(false);
@@ -20,7 +38,8 @@ const Example = () => {
 
   return (
     <>
-      <StyledButton isSelected={isSelected} onClick={clickHandler}>ボタン。</StyledButton>
+      <StyledButton isSelected={isSelected} onClick={clickHandler}>ボタンA</StyledButton>
+      <OrangeButton isSelected={isSelected} onClick={clickHandler}><span>オレンジ</span></OrangeButton>
       <button className={`btn ${isSelected ? "selected" : ""}`} onClick={clickHandler}>
         ボタン
       </button>
