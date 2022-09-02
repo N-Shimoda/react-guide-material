@@ -7,15 +7,15 @@ const FirstButton = styled.button`
   margin: 0.5rem 1rem;
   width: 11rem;
   border: none;
-  background-color: pink;
+  background-color: pink; // new.
 `;
 
-const SecondButton = styled(FirstButton)`
+const SecondButton = styled(FirstButton)` // new.
   background-color: red;
   color: white;
 `
 
-const ThirdButton = styled(SecondButton)`
+const ThirdButton = styled(SecondButton)` // new.
   background-color: ${(props) => (props.dark ? "black" : "green")};
 `
 
